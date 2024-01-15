@@ -1,0 +1,118 @@
+{% extends 'website/base.html' %}
+{% block title %}
+Тематические выставки| Библиотека «РГЭУ (РИНХ)»
+{% endblock %}
+{% block content %}
+<style>
+    #myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 95%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    margin-left: 0;
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)}
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 150px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+    .content{
+
+      margin: 0 auto;
+    }
+	</style>
+<div>
+<header style="padding-top: 100px; margin-left: 100px; margin-right: 100px">
+    <div class="content">
+{% for exhibition in exhibitions %}
+     <h6 style=" float: left; font-size: 24px; font-family: 'Times New Roman', serif; margin: 1% 1% 9% 10%;margin-right: 0;  text-align: center; border-bottom: solid 1px #858585"><b style="">{{ exhibition.title }}</b><p>  </p>
+    <br>
+      <a href="#iw-modal{{ exhibition.id }}" id="{{ exhibition.id }}" class="iw-modal-btn">
+          <img   src="{{ exhibition.image.url}}"  style=" width: 300px;  height: 383px;margin-left: 20px; float: left; align:top;margin-top: 10px; margin-bottom: 20px" alt="" width="100%" height="auto" /></a>
+<div id="iw-modal{{ exhibition.id }}" class="iw-modal">
+<div class="iw-modal-wrapper" style="margin-left: 550px; margin-right: 100px">
+<div class="iw-CSS-modal-inner" style=" width: 1000px; height: 1150px; margin:auto">
+<div class="iw-modal-header" style="margin-left: 0">
+<a href="#close" title="Закрыть" class="iw-close">×</a>
+</div>
+<div class="iw-modal-text">
+<p style="font-size: 24px; font-family: 'Times New Roman', serif;">
+    <img   src="{{ exhibition.image.url}}"  style="float: left; margin-right: 50px; width: 800px;  height:1000px;" alt="" width="300" height="500" /></p>
+</div>
+</div>
+</div>
+</div>
+<pre style="text-align: justify; font-size: 23px; width: auto; left: 0 ; margin-left: 330px;font-family: 'Times New Roman', serif;">{{ exhibition.text }}<p>  </p> {{ exhibition.data_exhib }}</pre>
+     </h6>
+{% endfor %}</div>
+</header>
+</div>
+{% endblock %}

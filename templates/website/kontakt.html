@@ -1,0 +1,113 @@
+{% extends 'website/base.html' %}
+{% block title %}
+Контакты| Библиотека «РГЭУ (РИНХ)»
+{% endblock %}
+
+
+{% block content %}
+    <head>
+    <style>
+        .otdeli{
+
+            color: #0f1161;
+        }
+    </style>
+
+</head>
+<header style="padding-top: 100px; margin-left: 400px; margin-right: 100px">
+<br>
+    <h1 style="color: #0f1161;font-size: 30px; font-family: 'Times New Roman', serif; "> Наши контакты </h1>
+    <br>
+    <div id="contacts" style="margin-bottom: 25px;font-size: 24px; margin-left: 0"><span id="shadfot">Электронная почта:</span> <span id="txtfot"><a href="mailto:rsuelib@mail.ru" style="color: #5759ae; ">rsuelib@mail.ru</a></span></div>
+
+{% comment %}{% for kontakt in kontakts %}
+        <strong  style="font-size: x-large;   color: #0f1161; margin-left: 0;"><span id="shadfot"> {{ kontakt.dol }}</span> </strong><br>
+    {% if kontakt.name %}
+        <h5 style="font-size: larger; margin-left: 0"><span id="shadfot"> {{ kontakt.name }}</span> </h5>{% endif %}
+        <h5 style="font-size: larger;  margin-left: 0"><span id="shadfot">Тел.: {{ kontakt.phoneNumber }}, внутренний: {{ kontakt.secondPhoneNumber }}</span> </h5>
+    {% if kontakt.mail %}
+        <h5 style="font-size: larger; margin-left: 0"><span href="mailto:{{ kontakt.mail}}" id="shadfot">{{ kontakt.mail}}</span> </h5><br>{% endif %}
+    {% if kontakt.mesto %}
+                <h5 style="font-size: larger; margin-left: 0">{{ kontakt.mesto}} </h5><br>
+    {% endif %}
+<br>
+{% endfor %}{% endcomment %}
+<ul style="padding-left: 0;
+    font-size: 22px;
+    list-style-type: none;">
+<li style="margin-top: 5px;"><strong class="otdeli" >Директор библиотеки</strong><br>
+Назарова Валентина Николаевна<br>
+телефон: + 7 (863) 261-38-48, внутренний 8-48</li>
+<li style="margin-top: 5px;"><strong class="otdeli" >ОТДЕЛ КОМПЛЕКТОВАНИЯ И ОБРАБОТКИ ФОНДОВ</strong><br>
+телефон: + 7 (863) 261-38-21, внутренний 8-21</li>
+<li style="margin-top: 5px;"><strong class="otdeli">ОТДЕЛ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ</strong><br>
+телефон: + 7 (863) 261-34-13, внутренний 4-13;<br>
+электронная почта: lib.rsue@yandex.ru</li>
+<li style="margin-top: 5px;"><strong class="otdeli">ОТДЕЛ ОБСЛУЖИВАНИЯ И ХРАНЕНИЯ ФОНДОВ БИБЛИОТЕКИ</strong><br> <!-- АНЛ -->
+телефон: + 7 (863) 261-38-36, внутренний 8-36;<br></li> <!--  + 7 (863) 240-36-04; +7 (863) 237-02-79, внутренний 4-13 -->
+	<ul style="font-size: 22px;
+    list-style-type: none;">
+	<li style="margin-top: 5px;"><strong class="otdeli">Абонемент учебной литературы (АУЛ)</strong><br>
+	телефон: + 7 (863) 267-43-83<br></li>
+	<li style="margin-top: 5px;"><strong class="otdeli">Абонемент научной и художественной литературы. Фонд редких книг</strong><br>
+	телефон: + 7 (863) 240-36-04<br>
+	адрес: ул. Б. Садовая, 69, ауд. 225
+	</li>
+	<li style="margin-top: 5px;"><strong class="otdeli">Читальный зал учебной, научной литературы и периодических изданий</strong><br>
+	телефон: + 7 (863) 261-38-00, внутренний 8-00<br>
+	адрес: ул. Б. Садовая, 69, ауд. 355
+	</li>
+	<li style="margin-top: 5px;"><strong class="otdeli">Читальный зал юридического факультета</strong><br>
+	телефон: + 7 (863) 266-64-52<br>
+	адрес: ул. М. Горького, 69, ауд. 101
+	</li>
+	<li style="margin-top: 5px;"><strong class="otdeli">Читальный зал факультета лингвистики и журналистики</strong><br>
+	адрес: ул. Тургеневская, 49
+	</li>
+</ul>
+<li style="margin-top: 5px;"><strong class="otdeli">ОТДЕЛ ЭЛЕКТРОННО-ИНФОРМАЦИОННЫХ РЕСУРСОВ И БИБЛИОГРАФИИ</strong><br>
+	телефон: + 7 (863) 240-36-04.
+	</li>
+	<ul style="font-size: 22px;
+    list-style-type: none;">
+
+	<li style="margin-top: 5px;"><strong class="otdeli">Электронный читальный зал (ЭЧЗ)</strong><br>
+	телефон: + 7 (863) 261-38-00, внутренний 8-00</li>
+	<li style="margin-top: 5px;"><strong class="otdeli">Кабинет научного сотрудника (КНС)</strong><br>
+	телефон: + 7 (863) 261-38-34, внутренний 8-34 </li>
+
+	</ul>
+
+<li style="margin-top: 5px;"><strong class="otdeli">БИБЛИОТЕКА ФИНАНСОВО-ЭКОНОМИЧЕСКОГО КОЛЛЕДЖА</strong><br>
+адрес: пер. Доломановский, 53<br><br></li>
+
+</ul>
+        </header>
+    <div id="footer" style=" background: #0f1161; bottom: 0;color: #0f1161; margin: 50px 0px 0 0px; right: 0px; left: 0px">
+   <div>
+<center><p style="color: #ffffff;text-decoration: none;cursor: pointer;font-size: xx-large; ">Наши партнеры</p></center>
+<center>
+    <a href="http://data-express.ru/" target="_blank">       <img src="{{ MEDIA_URL }}megapro.png"          tppabs="http://library.rsue.ru/storage/Images/megapro.png"      alt="МегаПро"           width="7%" ></a>
+		<a href="http://biblioclub.ru/" target="_blank">         <img src="{{ MEDIA_URL }}bibl.png"              tppabs="http://library.rsue.ru/storage/Images/ubs.png"           alt="УБС Онлайн"       width="7%"></a>
+		<a href="http://www.iprbookshop.ru/" target="_blank">    <img src="{{ MEDIA_URL }}iprsmart.jpg"          tppabs="http://library.rsue.ru/storage/Images/iprlogo.png"       alt="IPRBooks"         width="7%"></a>
+		<a href="https://ibooks.ru/" target="_blank">            <img src="{{ MEDIA_URL }}logo_ibooks.png"      tppabs="http://library.rsue.ru/storage/Images/logo_ibooks.png"   alt="ibooks"           width="7%"></a>
+		<a href="https://znanium.com/" target="_blank">          <img src="{{ MEDIA_URL }}znanium-logo.png"     tppabs="http://library.rsue.ru/storage/Images/znanium-logo.png"  alt="znanium"          width="7%"></a>
+		<a href="http://e.lanbook.com/" target="_blank">         <img src="{{ MEDIA_URL }}Lan.png"             tppabs="http://library.rsue.ru/storage/Images/Лань.jpg"          alt="poldred.com"      width="7%"></a>
+		<a href="https://rusneb.ru/" target="_blank">            <img src="{{ MEDIA_URL }}НЭБ.jpg"              tppabs="http://library.rsue.ru/storage/Images/НЭБ.jpg"           alt="НЭБ"              width="7%"></a>
+		<a href="http://diss.rsl.ru/" target="_blank">           <img src="{{ MEDIA_URL }}rgb.jpg"              tppabs="http://library.rsue.ru/storage/Images/rgb.jpg"          alt="poldred.com"       width="7%"></a>
+	    <br><br>
+		<a href="http://www.sciencedirect.com/" target="_blank"> <img src="{{ MEDIA_URL }}ScienceDirect.jpg"    tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="Web of Science"    width="7%"></a>
+		<a href="https://www.elsevier.com/" target="_blank">     <img src="{{ MEDIA_URL }}elsevierscience1.png" tppabs="storage/Images/elsevierscience1.png"                    alt="elsevierscience"   width="7%"></a>
+		<a href="https://dlib.eastview.com" target="_blank"> 	 <img src="{{ MEDIA_URL }}ivis.svg"             tppabs="http://library.rsue.ru/storage/Images/ivis.svg"         alt="dlib.eastview.com" width="7%"></a>
+		<a href="http://www.polpred.com/" target="_blank">       <img src="{{ MEDIA_URL }}polpred.png"     tppabs="http://library.rsue.ru/storage/Images/logo_polpred.jpg" alt="poldred.com"       width="7%" ></a>
+		<a href="https://elibrary.ru" target="_blank">           <img src="{{ MEDIA_URL }}elibrary.png"         tppabs="http://library.rsue.ru/storage/Images/polpred.jpg"      alt="eLIBRARY.RU"       width="7%" ></a>
+		<a href="https://arbicon.ru/" target="_blank">           <img src="{{ MEDIA_URL }}arbicon.png"          tppabs="http://library.rsue.ru/storage/Images/arbicon.png"      alt="АРБИКОН"           width="7%" ></a>
+<!--
+		<a href="http://isiknowledge.com" target="_blank">       <img src="storage/Images/webofscience.png"  tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="УБС Онлайн"     width="5%" ></a>
+-->
+	     </center>
+   </div></div>
+
+{% endblock %}
+
+</html>

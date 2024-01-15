@@ -1,0 +1,61 @@
+{% extends 'website/base.html' %}
+{% block title %}
+Студентам| Библиотека «РГЭУ (РИНХ)»
+{% endblock %}
+
+{% block content %}
+<header style="padding-top: 60px; margin-left: 200px; margin-right: 100px">
+
+</center>
+
+	<!-- VIDEO -->
+
+	<br><center>
+	<p style="font-size: 24px; font-family: 'Times New Roman', serif; width: 1100px">	Приглашаем студентов посетить абонемент учебной литературы библиотеки (пер. Островского, 62), где вы сможете получить читательский билет и взять учебную литературу сроком на один семестр. </p>
+</center>
+<center>
+                 	  <video width="600" height="400" controls="controls" >
+                 	 <source src="{{ MEDIA_URL }}IMG_5155.mov" type='video/mp4;'>
+   		         </video>
+                  </center>
+    <br>
+    <p> <strong> <a href="{{ MEDIA_URL }}perv2022.pdf" target="_blank" style="font-size: 24px; color: #2994f1">Электронный путеводитель по библиотеке.</a></strong></p>
+    <p> <strong> <a href="{{ MEDIA_URL }}rekom.pdf" target="_blank" style="font-size: 24px; color: #2994f1">Проект "Я рекомендую!"</a></strong></p>
+        <p><strong> <a href="{{ MEDIA_URL }}gost_r_7.0.76-2022.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.76-2022 Система стандартов по информации, библиотечному и издательскому делу. Библиографирование. Библиографические ресурсы Термины и определения. Дата введения в действие 1 сентября 2022.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_r_7.0.94-2022.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.94-2022 Система стандартов по информации, библиотечному и издательскому делу. Библиотечный фонд. Термины и определения. Дата введения в действие 1 сентября 2022.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost 7.0.1 100-2018.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ 7.0.1 100-2018 Библиографическая запись. Библиографическое описание. Общие требования и правила составления.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_7.0.12-2011.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.12-2011 Библиографическая запись. Сокращение слов и словосочетаний на русском языке. Общие требования и правила.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_7.0.5-2008.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.5-2008 Библиографическая ссылка. Общие требования и правила составления.</a></strong></p>
+    <p style="margin-bottom: 200px"> <strong> <a href="{{ MEDIA_URL }}bibl%20zapis.pdf" target="_blank" style="font-size: 24px; color: #2994f1; ">ГОСТ 7.82-2001 Библиографическая запись. Библиографическое описание электронных ресурсов. Общие требования и правила составления.</a></strong></p>
+
+
+<br>
+        </header>
+    <div id="footer" style=" background: #0f1161; bottom: 0;color: #0f1161; margin: 50px 0px 0 0px; right: 0px; left: 0px">
+   <div>
+<center><p style="color: #ffffff;text-decoration: none;cursor: pointer;font-size: xx-large; ">Наши партнеры</p></center>
+<center>
+    <a href="http://data-express.ru/" target="_blank">       <img src="{{ MEDIA_URL }}megapro.png"          tppabs="http://library.rsue.ru/storage/Images/megapro.png"      alt="МегаПро"           width="7%" ></a>
+		<a href="http://biblioclub.ru/" target="_blank">         <img src="{{ MEDIA_URL }}bibl.png"              tppabs="http://library.rsue.ru/storage/Images/ubs.png"           alt="УБС Онлайн"       width="7%"></a>
+		<a href="http://www.iprbookshop.ru/" target="_blank">    <img src="{{ MEDIA_URL }}iprsmart.jpg"          tppabs="http://library.rsue.ru/storage/Images/iprlogo.png"       alt="IPRBooks"         width="7%"></a>
+		<a href="https://ibooks.ru/" target="_blank">            <img src="{{ MEDIA_URL }}logo_ibooks.png"      tppabs="http://library.rsue.ru/storage/Images/logo_ibooks.png"   alt="ibooks"           width="7%"></a>
+		<a href="https://znanium.com/" target="_blank">          <img src="{{ MEDIA_URL }}znanium-logo.png"     tppabs="http://library.rsue.ru/storage/Images/znanium-logo.png"  alt="znanium"          width="7%"></a>
+		<a href="http://e.lanbook.com/" target="_blank">         <img src="{{ MEDIA_URL }}Lan.png"             tppabs="http://library.rsue.ru/storage/Images/Лань.jpg"          alt="poldred.com"      width="7%"></a>
+		<a href="https://rusneb.ru/" target="_blank">            <img src="{{ MEDIA_URL }}НЭБ.jpg"              tppabs="http://library.rsue.ru/storage/Images/НЭБ.jpg"           alt="НЭБ"              width="7%"></a>
+		<a href="http://diss.rsl.ru/" target="_blank">           <img src="{{ MEDIA_URL }}rgb.jpg"              tppabs="http://library.rsue.ru/storage/Images/rgb.jpg"          alt="poldred.com"       width="7%"></a>
+	    <br><br>
+		<a href="http://www.sciencedirect.com/" target="_blank"> <img src="{{ MEDIA_URL }}ScienceDirect.jpg"    tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="Web of Science"    width="7%"></a>
+		<a href="https://www.elsevier.com/" target="_blank">     <img src="{{ MEDIA_URL }}elsevierscience1.png" tppabs="storage/Images/elsevierscience1.png"                    alt="elsevierscience"   width="7%"></a>
+		<a href="https://dlib.eastview.com" target="_blank"> 	 <img src="{{ MEDIA_URL }}ivis.svg"             tppabs="http://library.rsue.ru/storage/Images/ivis.svg"         alt="dlib.eastview.com" width="7%"></a>
+		<a href="http://www.polpred.com/" target="_blank">       <img src="{{ MEDIA_URL }}polpred.png"     tppabs="http://library.rsue.ru/storage/Images/logo_polpred.jpg" alt="poldred.com"       width="7%" ></a>
+		<a href="https://elibrary.ru" target="_blank">           <img src="{{ MEDIA_URL }}elibrary.png"         tppabs="http://library.rsue.ru/storage/Images/polpred.jpg"      alt="eLIBRARY.RU"       width="7%" ></a>
+		<a href="https://arbicon.ru/" target="_blank">           <img src="{{ MEDIA_URL }}arbicon.png"          tppabs="http://library.rsue.ru/storage/Images/arbicon.png"      alt="АРБИКОН"           width="7%" ></a>
+<!--
+		<a href="http://isiknowledge.com" target="_blank">       <img src="storage/Images/webofscience.png"  tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="УБС Онлайн"     width="5%" ></a>
+-->
+	     </center>
+   </div></div>
+
+{% endblock %}
+
+</html>

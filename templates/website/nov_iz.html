@@ -1,0 +1,217 @@
+{% extends 'website/base.html' %}
+{% block title %}
+Выставки на полке| Библиотека «РГЭУ (РИНХ)»
+{% endblock %}
+
+{% block content %}
+    <style>
+    .panel_slider{
+        background-image: url({{ MEDIA_URL }}5057a32b923a673.jpg);
+    }
+    </style>
+<header style="padding-top: 60px;">
+	<script type="text/javascript">
+
+		jQuery(document).ready(function() {
+
+			//define custom parameters
+			$.bookshelfSlider('#bookshelf_slider', {
+				'item_width': '100%', //responsive design > resize window to see working
+				'item_height': 1430	, //1430
+				'products_box_margin_left': 30,
+				'product_title_textcolor': '#ffffff',
+				'product_title_bgcolor': '#c33b4e',
+				'product_margin': 20,
+				'product_show_title': false,
+				'show_title_in_popup': true,
+				'show_selected_title': true,
+				'show_icons': true,
+				'buttons_margin': 15,
+				'buttons_align': 'left', // left, center, right
+				'slide_duration': 600,
+				'slide_easing': 'easeOutQuart',
+				'arrow_duration': 800,
+				'arrow_easing': 'easeInOutQuart',
+				'video_width_height': [500,290],
+				'iframe_width_height': [500,330]
+				}
+			);
+
+		});//ready
+
+		</script>
+
+		<style>
+ .iw-modal {
+opacity: 0; /*изначально этот блок должен быть прозрачным*/
+background: rgba(0,0,0,0.7); /*задаём цвет фона*/
+pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 9999;
+transition: all 0.5s ease;
+margin: 0;
+padding: 0;
+}
+.iw-modal:target {
+opacity: 1; /*при клике блок становится видимым*/
+pointer-events: auto; /*теперь по блоку можно кликать мышкой*/
+overflow-y: auto; /*прокрутка по вертикли страницы*/
+}
+.iw-modal-wrapper {
+margin:auto; /*выравниваем модальное окно по центру по горизонтали*/
+margin-top:25vh; /*отступ сверху можно задавать в px, % или vh*/
+}
+/*CSS-свойства для блока, содержащего контент модального окна */
+.iw-CSS-modal-inner {
+position: relative;
+background: #fff; /*цвет фона*/
+border: 1px solid #ccc; /*цвет и толщина рамки*/
+border-radius: 0px; /*радиус скругления углов*/
+margin:auto;
+    opacity: 2;
+}
+/*CSS-свойства заголовка модального окна */
+.iw-modal-header {
+padding: 15px;/*внутренний отступ*/
+background:#f1f1f1;/*цвет фона*/
+position:relative;
+}
+.iw-modal-title {
+font-size: 18px; /*размер шрифта*/
+color:#555; /*цвет шрифта*/
+font-weight:bold; /*жирность шрифта*/
+line-height: 1.5; /*высота строки*/
+margin-top: 0;
+margin-bottom: 0;
+}
+/*CSS для кнопки закрытия*/
+.iw-close {
+position:absolute;
+top:15px; /*отступ сверху*/
+right:10px; /*отступ справа*/
+font-size: 24px; /*размер шрифта*/
+color: #555; /*цвет шрифта*/
+text-decoration: none;
+}
+.iw-close:hover, .iw-close:focus {
+color: #000; /*цвет шрифта при наведении*/
+cursor: pointer;
+}
+/*CSS для блока с текстом*/
+.iw-modal-text {
+padding: 15px 20px; /*внутренний отступ*/
+}
+/**MEDIA**/
+@media (min-width: 550px) {
+.iw-modal-wrapper {
+max-width: 500px;
+}
+}#bookshelf_main	{
+			width:85%;
+			margin: 0 auto;
+		}
+		</style>
+
+    <div class="uk-navbar-flip uk-visible-small">
+		<a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
+      	   </div>
+      	  </nav>
+      	</div>
+      </div>
+      <div id="tm-main" class="tm-main uk-block uk-block-default" style="margin-left: 0px ">
+     <div class="uk-container uk-container-center" style="margin-left: 0px ">
+    <div class="uk-grid" data-uk-grid-match data-uk-grid-margin>
+   <main class="uk-width-1-1">
+    <article class="uk-article" style="font-size: 19px; font-family: 'Times New Roman', serif;">
+<center>
+	<strong style="font-size: 24px; font-family: 'Times New Roman', serif; ">Уважаемые читатели!</strong><br>Добро пожаловать в раздел &quot;
+		Новинки издательств&quot;!<br>
+		Здесь вы узнаете о новинках литературы, а также сможете просмотреть бюллетени новых поступлений за предыдущие периоды.
+	<br><br>
+	<!-- <div style="text-align:center"><strong >Книжные новинки издательствa «КНОРУС»</strong></div><br> -->
+	Литература, поступишвая в библиотеку РГЭУ (РИНХ) в 2023 году.
+<!-- Библиотека РГЭУ (РИНХ)  в рамках популяризации новой учебной литературы предлагает вашему вниманию новинки издательско-полиграфического комплекса университета. -->
+<br>
+<br>
+</center>
+
+</p>
+
+<div data-role="page" id="bookshelf_main" style="margin-left: 0px ">
+     <div data-role="header" id="header">
+	<h1> </h1>
+     </div>
+    {% for category in categorys %}
+        <div id="bookshelf_slider" style=" webkit-box-shadow: 0px 1px 10px 5px #222;-moz-box-shadow: 0px 1px 10px 5px #222;box-shadow: 1px 2px 10px 5px #222;">
+          <div class="panel_title" style="opacity:0.9;filter:alpha(opacity=40);background-image: url({{ MEDIA_URL }}5057a32b923a673.jpg); margin-left: 0">
+	       <div class="selected_title_box"style="opacity:0.9;filter:alpha(opacity=40);background-image: url({{ MEDIA_URL }}5057a32b923a673.jpg)">
+		   <div class="selected_title" style="font-size: 19px; font-family: 'Times New Roman', serif;margin-left: 0; color: white; text-align: center;">{{ category.name }}</div>
+ 		</div>
+	        <div class="menu_top">
+		</div>
+	  </div><div class="panel_slider" style="filter:alpha(opacity=40);background-image: url({{ MEDIA_URL }}5057a32b923a673.jpg); margin-left: 0">
+    {% for exhibition in exhibitions %}
+    {% for exh in exhs %}
+            <!-- .panel_title -->
+
+
+      <a href="#iw-modal{{ exhibition.id }}" id="{{ exhibition.id }}" class="iw-modal-btn"> <img   src="{{ exhibition.image.url}}"  style=" width: 200px;  height: 283px;margin-left: 20px;margin-top: 10px; margin-bottom: 20px" alt="" width="100%" height="auto" /></a>
+
+<div id="iw-modal{{ exhibition.id }}" class="iw-modal">
+<div class="iw-modal-wrapper" style="margin-left: 300px">
+<div class="iw-CSS-modal-inner" style=" width: 80%; display: inline-block; margin:auto">
+
+<div class="iw-modal-header" style="margin-left: 0">
+<a href="#close" title="Закрыть" class="iw-close">×</a>
+</div>
+<div class="iw-modal-text">
+    <img   src="{{ exhibition.image.url}}"  style="float: left; padding-right: 50px; width: 150px;  height: 233px;"  />
+    <p>{{ exhibition.title}}</p>
+<p style="font-size: 24px; font-family: 'Times New Roman', serif;">
+
+        {{ exhibition.text }}</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </ul>
+
+{% endfor %}{% endfor %}</div></div>{% endfor %}
+</ul>
+
+
+
+</div><!-- panel_slider --></article></main></div>
+    </div></div></header>
+    <div id="footer" style=" background: #0f1161; bottom: 0;color: #0f1161; margin: 50px 0px 0 0px; right: 0px; left: 0px">
+   <div>
+<center><p style="color: #ffffff;text-decoration: none;cursor: pointer;font-size: xx-large; ">Наши партнеры</p></center>
+<center>
+    <a href="http://data-express.ru/" target="_blank">       <img src="{{ MEDIA_URL }}megapro.png"          tppabs="http://library.rsue.ru/storage/Images/megapro.png"      alt="МегаПро"           width="7%" ></a>
+		<a href="http://biblioclub.ru/" target="_blank">         <img src="{{ MEDIA_URL }}bibl.png"              tppabs="http://library.rsue.ru/storage/Images/ubs.png"           alt="УБС Онлайн"       width="7%"></a>
+		<a href="http://www.iprbookshop.ru/" target="_blank">    <img src="{{ MEDIA_URL }}iprsmart.jpg"          tppabs="http://library.rsue.ru/storage/Images/iprlogo.png"       alt="IPRBooks"         width="7%"></a>
+		<a href="https://ibooks.ru/" target="_blank">            <img src="{{ MEDIA_URL }}logo_ibooks.png"      tppabs="http://library.rsue.ru/storage/Images/logo_ibooks.png"   alt="ibooks"           width="7%"></a>
+		<a href="https://znanium.com/" target="_blank">          <img src="{{ MEDIA_URL }}znanium-logo.png"     tppabs="http://library.rsue.ru/storage/Images/znanium-logo.png"  alt="znanium"          width="7%"></a>
+		<a href="http://e.lanbook.com/" target="_blank">         <img src="{{ MEDIA_URL }}Lan.png"             tppabs="http://library.rsue.ru/storage/Images/Лань.jpg"          alt="poldred.com"      width="7%"></a>
+		<a href="https://rusneb.ru/" target="_blank">            <img src="{{ MEDIA_URL }}НЭБ.jpg"              tppabs="http://library.rsue.ru/storage/Images/НЭБ.jpg"           alt="НЭБ"              width="7%"></a>
+		<a href="http://diss.rsl.ru/" target="_blank">           <img src="{{ MEDIA_URL }}rgb.jpg"              tppabs="http://library.rsue.ru/storage/Images/rgb.jpg"          alt="poldred.com"       width="7%"></a>
+	    <br><br>
+		<a href="http://www.sciencedirect.com/" target="_blank"> <img src="{{ MEDIA_URL }}ScienceDirect.jpg"    tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="Web of Science"    width="7%"></a>
+		<a href="https://www.elsevier.com/" target="_blank">     <img src="{{ MEDIA_URL }}elsevierscience1.png" tppabs="storage/Images/elsevierscience1.png"                    alt="elsevierscience"   width="7%"></a>
+		<a href="https://dlib.eastview.com" target="_blank"> 	 <img src="{{ MEDIA_URL }}ivis.svg"             tppabs="http://library.rsue.ru/storage/Images/ivis.svg"         alt="dlib.eastview.com" width="7%"></a>
+		<a href="http://www.polpred.com/" target="_blank">       <img src="{{ MEDIA_URL }}polpred.png"     tppabs="http://library.rsue.ru/storage/Images/logo_polpred.jpg" alt="poldred.com"       width="7%" ></a>
+		<a href="https://elibrary.ru" target="_blank">           <img src="{{ MEDIA_URL }}elibrary.png"         tppabs="http://library.rsue.ru/storage/Images/polpred.jpg"      alt="eLIBRARY.RU"       width="7%" ></a>
+		<a href="https://arbicon.ru/" target="_blank">           <img src="{{ MEDIA_URL }}arbicon.png"          tppabs="http://library.rsue.ru/storage/Images/arbicon.png"      alt="АРБИКОН"           width="7%" ></a>
+<!--
+		<a href="http://isiknowledge.com" target="_blank">       <img src="storage/Images/webofscience.png"  tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="УБС Онлайн"     width="5%" ></a>
+-->
+	     </center>
+   </div></div>
+
+{% endblock %}

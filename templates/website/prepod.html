@@ -1,0 +1,129 @@
+{% extends 'website/base.html' %}
+{% block title %}
+Студентам| Библиотека «РГЭУ (РИНХ)»
+{% endblock %}
+
+{% block content %}
+<header style="padding-top: 100px; margin-left: 200px; margin-right: 100px">
+
+</center>
+<style>
+    .info {
+  background-color: #f9f9ff;
+  padding: 10px 25px;
+}
+
+.info__switch {
+  display: none;
+}
+
+.info__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.info__switch:checked~.info__body {
+  max-height: 100px;
+}
+
+.info__headline::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 4px;
+  border: 6px solid #39739d;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+.info__switch:checked~.info__headline::before {
+  transform: rotate(180deg) translateY(6px);
+}
+
+.info__headline {
+  display: block;
+  position: relative;
+  margin-bottom: 15px;
+  user-select: none;
+  color: #39739d;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.info__headline:hover {
+  text-decoration: underline;
+}
+</style>
+	<!-- VIDEO -->
+<div>
+    <p><strong> <a href="{{ MEDIA_URL }}postgrhelp.pdf" target="_blank" style="font-size: 24px; color: #2994f1">"В помощь аспиранту, соискателю".</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}fortheresearhes.pdf" target="_blank" style="font-size: 24px; color: #2994f1">Рекомендации по использованию социальных сетей ученых.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}2023-I.pdf" target="_blank" style="font-size: 24px; color: #2994f1">Список периодических изданий, получаемых библиотекой РГЭУ(РИНХ) 2023 г.</a></strong></p>
+    <br>
+    <h5 style="font-size: 25px;color: #0f1161;">КАТАЛОГИ НОВИНОК ВЕДУЩИХ ИЗДАТЕЛЬСТВ</h5>
+    <p> <strong> <a href="{{ MEDIA_URL }}Издательство Инфра-М.xls" target="_blank" style="font-size: 24px; color: #2994f1">Новинки издательства Инфра-М.</a></strong></p>
+    <p> <strong> <a href="{{ MEDIA_URL }}Издательство Кнорус.xlsx" target="_blank" style="font-size: 24px; color: #2994f1">Новинки издательства Кнорус.</a></strong></p>
+    <p> <strong> <a href="{{ MEDIA_URL }}Издательство Феникс.xls" target="_blank" style="font-size: 24px; color: #2994f1">Новинки издательства Феникс.</a></strong></p>
+    <p> <strong> <a href="{{ MEDIA_URL }}Издательство Юрайт.xls" target="_blank" style="font-size: 24px; color: #2994f1">Новинки издательства ЮРАЙТ.</a></strong></p>
+    <br>
+        <h5 style="font-size: 25px;color: #0f1161;">ДРУГИЕ ДОКУМЕНТЫ</h5>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_r_7.0.76-2022.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.76-2022 Система стандартов по информации, библиотечному и издательскому делу. Библиографирование. Библиографические ресурсы Термины и определения. Дата введения в действие 1 сентября 2022.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_r_7.0.94-2022.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.94-2022 Система стандартов по информации, библиотечному и издательскому делу. Библиотечный фонд. Термины и определения. Дата введения в действие 1 сентября 2022.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost 7.0.1 100-2018.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ 7.0.1 100-2018 Библиографическая запись. Библиографическое описание. Общие требования и правила составления.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_7.0.12-2011.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.12-2011 Библиографическая запись. Сокращение слов и словосочетаний на русском языке. Общие требования и правила.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_7.0.5-2008.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ Р 7.0.5-2008 Библиографическая ссылка. Общие требования и правила составления.</a></strong></p>
+    <p><strong> <a href="{{ MEDIA_URL }}gost_7.82-2001.pdf" target="_blank" style="font-size: 24px; color: #2994f1">ГОСТ 7.82-2001 Библиографическая запись. Библиографическое описание электронных ресурсов. Общие требования и правила составления.</a></strong></p>
+
+   <!-- <a onclick="hidetxt('div2'); return false;" href="#" style="color: #0f1161" rel="nofollow">АРХИВ БИБЛИОГРАФИЧЕСКИХ УКАЗАТЕЛЕЙ РОСТОВСКОЙ ОБЛАСТИ 2012-2019</a>
+<div style="display:none;" id="div2">
+
+<p>
+   <img src="storage/biblioindex_img/bu_RO_2019.jpg" tppabs="http://library.rsue.ru/storage/Biblioindex/bu_RO_2019.jpg" alt="Указатель РО 2019" hspace="15" width="284" align="left">Уважаемые читатели! Научно-библиографический отдел библиотеки
+   Ростовского государственного экономического университета (РИНХ) предлагает вашему вниманию библиографический указатель «Ростовская область 2019г.»
+   В настоящем библиографическом указателе публикуются основные показатели, характеризующие социально-экономическое положение Ростовской области и Южного Федерального округа в 2019 году. В указателе представлена
+   информация о населении, его занятости, уровне жизни, проблемах социальной сферы, охране окружающей среды, часть материалов указателя освещает финансовое состояние области, цены и тарифы, инвестиционную
+   деятельность. Значительное место отведено показателям, характеризующим положение в отдельных отраслях экономики, промышленности, транспорте, торговле. В указателе были использованы материалы из центральных,
+   областных периодических изданий, книги по Ростовской области и Ростову, труды преподавателей РГЭУ (РИНХ). Материал расположен в систематическом порядке. В каждом разделе сохраняется алфавитный порядок.
+   Указатель предназначен для профессорско-преподавательского состава, аспирантов и студентов - для всех, кому нужна самая объективная информация об экономике области.
+</p>
+<p><a href="storage/biblioindex/biblioindex_RostObl_2019.pdf"  target="_blank" tppabs="http://library.rsue.ru/storage/biblioindex/biblioindex_RostObl_2019.pdf">ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ
+ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ ВЫСШЕГО ОБРАЗОВАНИЯ «РОСТОВСКИЙ ГОСУДАРСТВЕННЫЙ ЭКОНОМИЧЕСКИЙ УНИВЕРСИТЕТ (РИНХ)» Ростовская область 2019 г.Рекомендательно-библиографический указатель (просмотреть/скачать)</a>.<br></p>
+<p>
+   <img src="storage/biblioindex_img/bu_RO_2018.jpg" tppabs="http://library.rsue.ru/storage/Biblioindex/bu_RO_2018.jpg" alt="Указатель РО 2018" hspace="15" width="284" align="left">Уважаемые читатели!
+Научно-библиографический отдел библиотеки Ростовского государственного экономического университета (РИНХ) предлагает вашему вниманию библиографический указатель «Ростовская область 2018 г.»
+В настоящем библиографическом указателе публикуются основные показатели, характеризующие социально-экономическое положение Ростовской области и Южного Федерального округа в 2018 году.
+В указателе представлена информация о населении, его занятости, уровне жизни, проблемах социальной сферы, охране окружающей среды, часть материалов указателя освещает финансовое состояние области,
+цены и тарифы, инвестиционную деятельность. Значительное место отведено показателям, характеризующим положение в отдельных отраслях экономики, промышленности, транспорте, торговле.
+В указателе были использованы материалы из центральных, областных периодических изданий, книги по Ростовской области и Ростову, труды преподавателей РГЭУ (РИНХ). Материал расположен в систематическом порядке.
+В каждом разделе сохраняется алфавитный порядок. Указатель предназначен для профессорско-преподавательского состава, аспирантов и студентов - для всех, кому нужна самая объективная информация об экономике области.
+</p></div> -->
+</div></header>
+    <div id="footer" style=" background: #0f1161; bottom: 0;color: #0f1161; margin: 50px 0px 0 0px; right: 0px; left: 0px">
+   <div>
+<center><p style="color: #ffffff;text-decoration: none;cursor: pointer;font-size: xx-large; ">Наши партнеры</p></center>
+<center>
+    <a href="http://data-express.ru/" target="_blank">       <img src="{{ MEDIA_URL }}megapro.png"          tppabs="http://library.rsue.ru/storage/Images/megapro.png"      alt="МегаПро"           width="7%" ></a>
+		<a href="http://biblioclub.ru/" target="_blank">         <img src="{{ MEDIA_URL }}bibl.png"              tppabs="http://library.rsue.ru/storage/Images/ubs.png"           alt="УБС Онлайн"       width="7%"></a>
+		<a href="http://www.iprbookshop.ru/" target="_blank">    <img src="{{ MEDIA_URL }}iprsmart.jpg"          tppabs="http://library.rsue.ru/storage/Images/iprlogo.png"       alt="IPRBooks"         width="7%"></a>
+		<a href="https://ibooks.ru/" target="_blank">            <img src="{{ MEDIA_URL }}logo_ibooks.png"      tppabs="http://library.rsue.ru/storage/Images/logo_ibooks.png"   alt="ibooks"           width="7%"></a>
+		<a href="https://znanium.com/" target="_blank">          <img src="{{ MEDIA_URL }}znanium-logo.png"     tppabs="http://library.rsue.ru/storage/Images/znanium-logo.png"  alt="znanium"          width="7%"></a>
+		<a href="http://e.lanbook.com/" target="_blank">         <img src="{{ MEDIA_URL }}Lan.png"             tppabs="http://library.rsue.ru/storage/Images/Лань.jpg"          alt="poldred.com"      width="7%"></a>
+		<a href="https://rusneb.ru/" target="_blank">            <img src="{{ MEDIA_URL }}НЭБ.jpg"              tppabs="http://library.rsue.ru/storage/Images/НЭБ.jpg"           alt="НЭБ"              width="7%"></a>
+		<a href="http://diss.rsl.ru/" target="_blank">           <img src="{{ MEDIA_URL }}rgb.jpg"              tppabs="http://library.rsue.ru/storage/Images/rgb.jpg"          alt="poldred.com"       width="7%"></a>
+	    <br><br>
+		<a href="http://www.sciencedirect.com/" target="_blank"> <img src="{{ MEDIA_URL }}ScienceDirect.jpg"    tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="Web of Science"    width="7%"></a>
+		<a href="https://www.elsevier.com/" target="_blank">     <img src="{{ MEDIA_URL }}elsevierscience1.png" tppabs="storage/Images/elsevierscience1.png"                    alt="elsevierscience"   width="7%"></a>
+		<a href="https://dlib.eastview.com" target="_blank"> 	 <img src="{{ MEDIA_URL }}ivis.svg"             tppabs="http://library.rsue.ru/storage/Images/ivis.svg"         alt="dlib.eastview.com" width="7%"></a>
+		<a href="http://www.polpred.com/" target="_blank">       <img src="{{ MEDIA_URL }}polpred.png"     tppabs="http://library.rsue.ru/storage/Images/logo_polpred.jpg" alt="poldred.com"       width="7%" ></a>
+		<a href="https://elibrary.ru" target="_blank">           <img src="{{ MEDIA_URL }}elibrary.png"         tppabs="http://library.rsue.ru/storage/Images/polpred.jpg"      alt="eLIBRARY.RU"       width="7%" ></a>
+		<a href="https://arbicon.ru/" target="_blank">           <img src="{{ MEDIA_URL }}arbicon.png"          tppabs="http://library.rsue.ru/storage/Images/arbicon.png"      alt="АРБИКОН"           width="7%" ></a>
+<!--
+		<a href="http://isiknowledge.com" target="_blank">       <img src="storage/Images/webofscience.png"  tppabs="http://library.rsue.ru/storage/Images/webofscience.png" alt="УБС Онлайн"     width="5%" ></a>
+-->
+	     </center>
+   </div></div>
+
+{% endblock %}
+
